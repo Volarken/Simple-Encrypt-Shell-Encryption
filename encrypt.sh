@@ -48,7 +48,7 @@ bash-obfuscate "$NAME"ob1.sh -o "$NAME"ob2.sh
 rm "$NAME"ob1.sh
 sed -i '1i #!/bin/bash' "$NAME"ob2.sh
 sudo shc -v -r -U  -f "$NAME"ob2.sh
-#rm "$NAME"ob2.sh
+rm "$NAME"ob2.sh
 sleep 1;
 cp "$NAME"ob2.sh.x "$NAME"
 rm "$NAME"ob2.sh.x
