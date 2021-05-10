@@ -41,10 +41,10 @@ read -p '' -e NAME
 fileExtension=${NAME: -3}
 clear
 done
-bash-obfuscate "$NAME".sh -o "$NAME"ob1.sh
+bash obfuscate "$NAME".sh -o "$NAME"ob1.sh
 sed -i '1i #!/bin/bash' "$NAME"ob1.sh
 ##Add $!/bin/bash to top of file
-bash-obfuscate "$NAME"ob1.sh -o "$NAME"ob2.sh
+bash obfuscate "$NAME"ob1.sh -o "$NAME"ob2.sh
 rm "$NAME"ob1.sh
 sed -i '1i #!/bin/bash' "$NAME"ob2.sh
 sudo shc -v -r -U  -f "$NAME"ob2.sh
