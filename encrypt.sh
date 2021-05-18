@@ -18,7 +18,6 @@ if [ $(dpkg-query -W -f='${Status}' npm nodejs 2>/dev/null | grep -c "ok install
 then
   echo You are missing required files, we will aquire them now. This may take a while. 
   read -p 'Press enter to continue.'
-  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   sudo apt-get install npm nodejs
   sudo apt-get install shc
   ln -s /usr/bin/nodejs /usr/bin/node
